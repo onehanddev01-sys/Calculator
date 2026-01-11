@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+#container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 350px;
+}
+
+#title h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#display {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    text-align: right;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    min-height: 80px;
+    font-size: 48px;
+    word-wrap: break-word;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn[data-type="number"] {
+    background: skyblue;
+    color: white;
+}
+
+.btn[data-type="number"]:hover {
+    background: mediumblue;
+}
+
+.btn[data-type="operator"] {
+    background: orange;
+    color: white;
+}
+
+.btn[data-type="operator"]:hover {
+    background: orangered;
+}
+
+.btn[data-type="clear"] {
+    background: orangered;
+    color: white;
+}
+
+.btn[data-type="clear"]:hover {
+    background: red;
+}
+
+.btn[data-type="equals"] {
+    background: greenyellow;
+    color: white;
+}
+
+.btn[data-type="equals"]:hover {
+    background: green;
+}
